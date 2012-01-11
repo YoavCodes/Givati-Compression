@@ -3,6 +3,7 @@
 <head>
   <title>Givati Compression</title>
   
+<meta charset=utf-8 />
   <style type="text/css">
   div {
   	border: 2px solid #000;
@@ -30,6 +31,8 @@
 </body>
 
 <h2>Givati Compression Algorithm</h2>
+<p>Get the code here: <a href="https://github.com/YoavGivati/Givati-Compression">https://github.com/YoavGivati/Givati-Compression</a></p>
+<p>A smart and lossless data compression algorithm with a focus on repeating data structures like JSON/JSONH, network and language permeability, decompression without requiring a pre-agreed dictionary, and minimum size over speed. Compression and speed comparable to Lempel-Ziv-Welch (LZW)</p>
 <br /><hr /><br />
 
 <div id="test1d">Hi, how are you today. For today- it is a blast. Yes today is good.-, 0Hi, how are you today. For today- it is a blast. Yes today is good.-</div>
