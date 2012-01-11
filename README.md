@@ -1,5 +1,7 @@
 # GIVATI Compression
 
+[Live Demo](http://yoavgivati.com/compression/)
+
 The algorithm selects two separators from an alphabet of around 90 ascii characters. The segments characters cannot appear in the uncompressed text. It then looks at every substring, so in the text "hello", it would look at "h", "he", "hel", "hell", "hello", "e", "el"... and so on and adds potentially viable substrings to a register. It calculates each substring's priority based on the number of bytes it would save if added to the dictionary where [ priority = (num matches) * length - (length + (num matches * 2)) ] and puts them in a catalog sorted by priority. It then moves through the the substrings from most effective to least recalculating priorities as it simulates removing the substrings, thus pruning and resorting the catalog. It then creates a hash table ie: the dictionary using the alphabet as a base(alphabet.length) number system. Should the size of the dictionary exceed the size of the alphabet it fills in the "leading zeros" in the dictionary. It then uses regular expressions to apply the hashtable to the data compressing it and then amends the dictionary along with header information to the compressed data.
 
 The compressed data structure is as follows
